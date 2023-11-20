@@ -1,0 +1,687 @@
+Run on 2023-11-07 13:59:06.950207
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 21000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0.01
+x_range = [1.  1.2 1.4 1.6 1.8 2.  2.2 2.4 2.6 2.8 3.  3.2 3.4 3.6 3.8 4.  4.2 4.4
+ 4.6 4.8 5. ]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.003
+Run on 2023-11-07 14:09:50.334773
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 21000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0.01
+x_range = [1.  1.2 1.4 1.6 1.8 2.  2.2 2.4 2.6 2.8 3.  3.2 3.4 3.6 3.8 4.  4.2 4.4
+ 4.6 4.8 5. ]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.003
+Run on 2023-11-07 14:13:58.872767
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 21000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0.01
+x_range = [1.  1.2 1.4 1.6 1.8 2.  2.2 2.4 2.6 2.8 3.  3.2 3.4 3.6 3.8 4.  4.2 4.4
+ 4.6 4.8 5. ]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.003
+Run on 2023-11-07 14:15:10.774106
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 21000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0.01
+x_range = [1.  1.2 1.4 1.6 1.8 2.  2.2 2.4 2.6 2.8 3.  3.2 3.4 3.6 3.8 4.  4.2 4.4
+ 4.6 4.8 5. ]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.003
+Run on 2023-11-07 15:34:34.576401
+N_MC = 10
+N_epochs = 4000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 21000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0.01
+x_range = [1.  1.2 1.4 1.6 1.8 2.  2.2 2.4 2.6 2.8 3.  3.2 3.4 3.6 3.8 4.  4.2 4.4
+ 4.6 4.8 5. ]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.003
+Run on 2023-11-07 15:41:07.000127
+N_MC = 10
+N_epochs = 4000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 21000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0.01
+x_range = [1.  1.2 1.4 1.6 1.8 2.  2.2 2.4 2.6 2.8 3.  3.2 3.4 3.6 3.8 4.  4.2 4.4
+ 4.6 4.8 5. ]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.003
+Run on 2023-11-07 15:42:42.823944
+N_MC = 10
+N_epochs = 4000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 21000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0.01
+x_range = [1.  1.2 1.4 1.6 1.8 2.  2.2 2.4 2.6 2.8 3.  3.2 3.4 3.6 3.8 4.  4.2 4.4
+ 4.6 4.8 5. ]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.003
+Run on 2023-11-07 15:47:53.712720
+N_MC = 10
+N_epochs = 4000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 21000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0.01
+x_range = [1.  1.2 1.4 1.6 1.8 2.  2.2 2.4 2.6 2.8 3.  3.2 3.4 3.6 3.8 4.  4.2 4.4
+ 4.6 4.8 5. ]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.003
+Run on 2023-11-07 16:04:29.235922
+N_MC = 1
+N_epochs = 4000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 21000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6 1.8 2.  2.2 2.4 2.6 2.8 3.  3.2 3.4 3.6 3.8 4.  4.2 4.4
+ 4.6 4.8 5. ]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.003
+Run on 2023-11-07 19:26:47.467712
+N_MC = 1
+N_epochs = 4000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 21000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6 1.8 2.  2.2 2.4 2.6 2.8 3.  3.2 3.4 3.6 3.8 4.  4.2 4.4
+ 4.6 4.8 5. ]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.003
+Run on 2023-11-07 19:31:41.747522
+N_MC = 1
+N_epochs = 4000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 21000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6 1.8 2.  2.2 2.4 2.6 2.8 3.  3.2 3.4 3.6 3.8 4.  4.2 4.4
+ 4.6 4.8 5. ]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.003
+Run on 2023-11-08 15:22:14.033620
+N_MC = 1
+N_epochs = 1000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 7000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6 1.8 2.  2.2]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.003
+Run on 2023-11-08 15:24:33.613515
+N_MC = 1
+N_epochs = 1000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 7000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6 1.8 2.  2.2]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-08 15:44:40.322141
+N_MC = 1
+N_epochs = 1000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.003
+Run on 2023-11-08 15:55:52.669847
+N_MC = 1
+N_epochs = 1000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.003
+Run on 2023-11-08 15:58:17.255199
+N_MC = 1
+N_epochs = 1000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.003
+Run on 2023-11-08 16:12:26.769594
+N_MC = 1
+N_epochs = 1000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.003
+Run on 2023-11-08 16:13:38.033679
+N_MC = 1
+N_epochs = 1000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.003
+Run on 2023-11-08 16:19:51.001035
+N_MC = 1
+N_epochs = 1000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-08 16:21:09.284784
+N_MC = 1
+N_epochs = 1000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-08 16:30:25.588687
+N_agents = 10
+N_MC = 1
+N_epochs = 2
+N_batches = 10000
+N_sample_per_batch = 1
+N_samples = 40000
+N_batches_per_epoch = 1
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-08 17:34:59.834809
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-08 18:51:02.897929
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-08 18:51:34.338541
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-08 18:53:19.614484
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-19 23:55:34.800225
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 00:02:01.002591
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 00:14:06.032269
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 00:14:30.291682
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 00:15:39.912344
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 00:21:17.198554
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 00:39:32.253095
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 00:52:44.318627
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 00:56:10.418851
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 00:57:09.119267
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 00:57:50.164533
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:00:30.968107
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:01:35.850750
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:02:04.592993
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:02:34.791839
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:03:15.500731
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:04:59.227732
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:06:15.537975
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:06:50.472390
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:07:36.206938
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:08:07.011087
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:10:04.735862
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:10:52.922229
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:12:40.177521
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:13:53.397077
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:14:48.531410
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:15:57.468883
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:17:58.189667
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:21:33.617566
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:22:25.129218
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:24:17.946887
+N_agents = 10
+N_MC = 1
+N_epochs = 10000
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:29:36.437190
+N_agents = 10
+N_MC = 1
+N_epochs = 10
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
+Run on 2023-11-20 01:29:55.696078
+N_agents = 10
+N_MC = 1
+N_epochs = 10
+N_batches = 10000
+N_sample_per_batch = 100
+N_samples = 4000000
+N_batches_per_epoch = 100
+sigma_obs_noise = 0
+x_range = [1.  1.2 1.4 1.6]
+learning rate of single NN = 0.0003
+learning rate of interacting NN = 0.0003
