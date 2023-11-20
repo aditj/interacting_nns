@@ -85,8 +85,8 @@ x_range = np.arange(1,1.2,0.2)
 N_sample_per_batch = 100
 N_samples = len(x_range) * N_batches * N_sample_per_batch
 N_batches_per_epoch = 2
-DO_SINGLE_NN = 1
-DO_INTERACTION = 1
+DO_SINGLE_NN = 0
+DO_INTERACTION = 0
 
 single_nn_learning_rate = 0.0003
 interacting_nn_learning_rate = 0.0003
@@ -302,11 +302,25 @@ axs_all_losses.plot(losses.mean(axis=0),label='Single NN')
 
 fig_all,axs_all = plt.subplots(1,1,figsize = (10,10))
 axs_all.plot(vali_losses.mean(axis=0),label='Single NN')
+start_x = 1
+end_x = np.argwhere(vali_losses.flatten()<0.5)[0][-1]
+start_y = vali_losses.flatten()[start_x-1]
+end_y = 0.5
+x_line = np.linspace(start_x,end_x,1000)
+slope = (start_y-end_y)/(np.log(end_x)-np.log(start_x))
+y_line = start_y + (np.log(start_x) - np.log(x_line))*slope
+y_line[y_line<0] = 0
+axs_all.plot(x_line,y_line,'k--')
+# Put text in middle of line tilted along the line_x)
+text_x = (np.log(start_x)+np.log(end_x))/2
+text_y = start_y + (np.log(start_x) - text_x)*slope
+string_slope = f'Slope = {slope:.2f}'
+axs_all.text(np.exp(text_x),text_y,string_slope,rotation = -np.arctan(slope)*180/np.pi)
 
 start_x = 1
 end_x = np.zeros((len(N_agents_list),))
 start_y = np.zeros((len(N_agents_list),))
-end_y = 1000
+end_y = 0.5
 
 l = 0
 for N_agents in N_agents_list:
