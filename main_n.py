@@ -19,7 +19,7 @@ class Net(nn.Module):
         for i in range(len(n_hidden)-1):
             setattr(self, 'hidden'+str(i), nn.Linear(n_hidden[i], n_hidden[i+1]))
         self.mu = nn.Linear(n_hidden[-1], n_output)
-        self.sigma = torch.tensor([std]).reshape(1,1)
+        self.sigma = torch.tensor([std]).reshape(1,1).to(DEVICE)
         ## reshape sigma with the same shape as mu
         #self.sigma = nn.Linear(n_hidden[-1], n_output)
     def forward(self, x):
@@ -29,7 +29,7 @@ class Net(nn.Module):
             x = torch.tanh(getattr(self, 'hidden'+str(i))(x))
         mu = self.mu(x)
         #sigma = elu(self.sigma(x)) + 1 + 1e-6
-        sigma = torch.tensor([self.sigma])
+        sigma = torch.tensor([self.sigma]).to(DEVICE)
         ## reshape sigma with the same shape as mu
         sigma = sigma.repeat(mu.shape[0],1)
         ### ensure sigma is positive
@@ -44,8 +44,8 @@ class Net(nn.Module):
         mean = x[:,0]
         mean = mean.flatten()
         std = x[:,1]
-        noise = torch.randn(x.shape[0])*noise_var
-        eps = torch.randn(x.shape[0])
+        noise = torch.randn(x.shape[0]).to(DEVICE)*noise_var
+        eps = torch.randn(x.shape[0]).to(DEVICE)
         return mean  + noise + eps*(std**2)
     
 # Define the loss function
@@ -70,7 +70,7 @@ def f(x):
     return x**2-6*x+9 
 
 N_MC = 1
-N_epochs = 1000
+N_epochs = 10000
 losses = np.zeros((N_MC,N_epochs))
 losses1 = np.zeros((N_MC,N_epochs))
 vali_losses = np.zeros((N_MC,N_epochs))
@@ -84,7 +84,7 @@ N_batches = 10000
 x_range = np.arange(1,1.2,0.2)
 N_sample_per_batch = 100
 N_samples = len(x_range) * N_batches * N_sample_per_batch
-N_batches_per_epoch = 100
+N_batches_per_epoch = 2
 DO_SINGLE_NN = 1
 DO_INTERACTION = 1
 
@@ -113,7 +113,9 @@ for j in tqdm.tqdm(range(N_MC)):
     ### Convert to tensor and transfer to GPU
     x_train = torch.Tensor(x_train).to(DEVICE)
     var_train = 0.01
-    y_train = f(x_train).reshape(N_samples,1) + np.random.randn(N_samples,1)*var_train
+    ### torch random randn 
+    noise = torch.randn(N_samples,1).to(DEVICE)*var_train
+    y_train = f(x_train).reshape(N_samples,1) + noise
     y_train = torch.Tensor(y_train).to(DEVICE)
     assert len(x_train) == len(y_train)
     # Shuffle the data
@@ -212,9 +214,12 @@ for j in tqdm.tqdm(range(N_MC)):
                 loss = loss_funcs[i](torch.Tensor(x_batch_nn1), torch.Tensor(y_batch_nn1))
                 loss.backward()
                 optimizers[i].step()
+                print("Actual Input",x_batch_nn1,y_batch_nn1,"Predicted Output By NN1",nn1.predict(torch.Tensor(x_batch_nn1)), "Predicted Output By NN2",agents[i].predict(torch.Tensor(x_batch_nn1)))
+
                 vali_losses_agents[i,j,0] = agents[i].validation(torch.Tensor(x_test), torch.Tensor(y_test)).item()
                 losses_agents[i,j,0] = loss_funcs[i](torch.Tensor(x_batch_nn1), torch.Tensor(y_batch_nn1)).item()
-            
+            x_batch_nn2 = np.linspace(x_range[0],x_range[-1],N_sample_per_batch*2).reshape(-1,1)
+            x_batch_nn2 = torch.Tensor(x_batch_nn2).to(DEVICE)
             for epoch in tqdm.tqdm(range(1,N_epochs)):
                 
                 batches_for_epoch = np.random.choice(N_batches,N_batches_per_epoch,replace=False)
@@ -237,8 +242,8 @@ for j in tqdm.tqdm(range(N_MC)):
                 vali_losses1[j,epoch] = nn1.validation(torch.Tensor(x_test), torch.Tensor(y_test)).item()
 
                 ### Train neural network 2
-                x_batch_nn2 = np.linspace(x_range[0],x_range[-1],N_sample_per_batch*2).reshape(-1,1)
-                y_batch_nn2 = nn1.sample(torch.Tensor(x_batch_nn2),noise_var=sigma_obs_noise).detach().numpy()
+                
+                y_batch_nn2 = nn1.sample(torch.Tensor(x_batch_nn2),noise_var=sigma_obs_noise)
                 optimizers[0].zero_grad()
                 loss_agent = loss_funcs[0](torch.Tensor(x_batch_nn2), torch.Tensor(y_batch_nn2))
                 loss_agent.backward()
@@ -248,8 +253,7 @@ for j in tqdm.tqdm(range(N_MC)):
 
                 ### Train agents 3 to N-1
                 for i in range(1,N_agents):
-                    x_batch_nn2 = np.linspace(x_range[0],x_range[-1],N_sample_per_batch*2).reshape(-1,1)
-                    y_batch_nn2 = agents[i-1].sample(torch.Tensor(x_batch_nn2),noise_var=sigma_obs_noise).detach().numpy()
+                    y_batch_nn2 = agents[i-1].sample(torch.Tensor(x_batch_nn2),noise_var=sigma_obs_noise)
                     optimizers[i].zero_grad()
                     loss_agent = loss_funcs[i](torch.Tensor(x_batch_nn2), torch.Tensor(y_batch_nn2))
                     loss_agent.backward()
