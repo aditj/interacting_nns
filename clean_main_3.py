@@ -14,7 +14,8 @@ def func(x):
     return 10*(x**2)
 
 N_epochs = 100
-N_MC = 10
+N_MC = 100
+
 
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 
@@ -22,7 +23,7 @@ DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 x_range = np.arange(1,1.2,0.2)
 N_sample_per_epoch = 10
 DO_SINGLE_NN = 0
-DO_INTERACTION = 0
+DO_INTERACTION = 1
 
 lr = 0.003
 SGDUPDATES_PER_EPOCH = 1000
@@ -152,7 +153,7 @@ def run_mc(mc):
                 prediction = first_level_nns[first_level_nn_idx].predict(x_test)
                 # print(f"First level {first_level_nn_idx}: Epoch {epoch+1} of {N_epochs}, variance = {variance_item}, prediction = {prediction}")
 
-            variances_interaction[mc,epoch,0] = np.mean(variances_interaction_item)
+            variances_interaction[epoch,0] = np.mean(variances_interaction_item)
             assert x_batch_second_nn.shape == y_batch_second_nn.shape == (N_sample_per_epoch,N_sample_per_epoch)
 
             x_batch_third_nn = torch.zeros((N_sample_per_epoch,1)).to(DEVICE)
@@ -189,8 +190,8 @@ def run_mc(mc):
                 sgd_index += 1
 
             
-            variances_interaction[mc,epoch,1] = third_level_nn.covariance(x_test,func(x_test)).item()
-            variance_item = variances_interaction[mc,epoch]
+            variances_interaction[epoch,1] = third_level_nn.covariance(x_test,func(x_test)).item()
+            variance_item = variances_interaction[epoch]
             prediction = third_level_nn.predict(x_test)
             # print(f"Third Level: Epoch {epoch+1} of {N_epochs}, variance = {variance_item}, prediction = {prediction}")
 
