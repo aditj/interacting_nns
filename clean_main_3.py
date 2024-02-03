@@ -2,8 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import torch
 import torch.nn as nn
-
+### parallelize the mc runs
+from multiprocessing import Pool
 import tqdm as tqdm
+import concurrent.futures
 
 from neural_networks import Net
 
@@ -13,8 +15,6 @@ def func(x):
 
 N_epochs = 100
 N_MC = 10
-variances_single = np.zeros((N_epochs,1))
-variances_interaction = np.zeros((N_MC,N_epochs,2))
 
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 
@@ -28,7 +28,12 @@ lr = 0.003
 SGDUPDATES_PER_EPOCH = 1000
 LOSS_THRESHOLD = -100
 
-for mc in tqdm.tqdm(range(N_MC)):
+### parallelize the mc runs
+
+def run_mc(mc):
+    variances_single = np.zeros((N_epochs,1))
+    variances_interaction = np.zeros((N_epochs,2))
+
     random_seed = mc
     np.random.seed(random_seed)
     torch.manual_seed(random_seed)
@@ -196,8 +201,24 @@ for mc in tqdm.tqdm(range(N_MC)):
                 second_level_nns[second_level_nn_idx].load_state_dict(third_level_nn.state_dict())
             if variance_item[0] <0.1 and variance_item[1] < 0.1:
                 break
-            
         np.save("variances_interaction_3.npy", variances_interaction)
+    return variances_single, variances_interaction
+if DO_SINGLE_NN or DO_INTERACTION:
+    mcs = range(N_MC)
+    with concurrent.futures.ProcessPoolExecutor() as executor:
+        results = list(tqdm.tqdm(executor.map(run_mc, mcs)))
+if DO_SINGLE_NN:
+    variances_single = np.zeros((N_MC,N_epochs,1))
+    for mc in mcs:
+        variances_single[mc], _ = results[mc]
+    np.save("variances_single.npy", variances_single)
+
+if DO_INTERACTION:
+    variances_interaction = np.zeros((N_MC,N_epochs,2))
+    for mc in mcs:
+        _, variances_interaction[mc] = results[mc]
+    np.save("variances_interaction_3.npy", variances_interaction)
+            
 
 variances_interaction = np.load("variances_interaction_3.npy")
 variances_single = np.load("variances_single.npy")
